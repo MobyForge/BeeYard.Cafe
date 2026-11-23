@@ -53,7 +53,7 @@ if(grid){
     const w=Math.min(210,Math.max(100,innerWidth*.25));
     const cols=Math.max(2,Math.floor(grid.clientWidth/w));let k=1,r=0,h='';
     while(k<=n){const c=Math.min(r%2?cols-1:cols,n-k+1);h+='<div class="hrow">';
-      for(let q=0;q<c;q++,k++)h+=`<button class="hx" style="--i:${k}" aria-label="View menu page ${k}"><div class="ph" data-label="Menu ${k}" data-img="assets/menu/menu-${p(k)}.jpg"></div></button>`;
+      for(let q=0;q<c;q++,k++)h+=`<button class="hx" style="--i:${k}" aria-label="View menu page ${k}"><div class="ph" data-label="Menu ${k}" data-img="assets/menu/menu-${p(k)}.jpeg"></div></button>`;
       h+='</div>';r++}
     grid.innerHTML=h;loadImgs(grid)};
   let lw=0;lay();lw=innerWidth;
