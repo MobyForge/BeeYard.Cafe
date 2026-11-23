@@ -1,9 +1,9 @@
 /* ===== EDIT THESE ===== */
 const CONFIG={
   whatsapp:'919999999999',            // country code + number, digits only
-  phone:'+91 99999 99999',
-  address:'Near IIPM Bengaluru, Bengaluru, Karnataka',
-  hours:'Mon–Sun · 10:00 AM – 11:00 PM',
+  phone:'+91 8197898209',
+  address:'BeeYard.cafe 1503/30, Outer Ring Road, Kengunte, Mallathahalli, Opp Ambedhkar Institute,, Bengaluru',
+  hours:'Mon–Sun · 10:30 AM – 10:30 PM',
   menuPages:11                        // menu images: assets/menu/menu-01.jpg … menu-11.jpg
 };
 /* ======================= */
