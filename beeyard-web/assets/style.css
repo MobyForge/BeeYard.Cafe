@@ -7,7 +7,7 @@
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font:400 1.05rem/1.7 var(--sans);color:var(--ink);background:var(--cream) var(--pat);animation:in .6s ease both}
-@keyframes in{from{opacity:0;transform:translateY(8px)}}
+@keyframes in{from{opacity:0}}
 img{max-width:100%;display:block}a{color:inherit}
 :focus-visible{outline:3px solid var(--honey);outline-offset:3px}
 h1,h2,h3{font-family:var(--serif);line-height:1.08;letter-spacing:-.02em}
