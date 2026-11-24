@@ -19,7 +19,7 @@ section{padding:clamp(4rem,9vw,7rem) 0}
 .lead{color:var(--muted);max-width:56ch;font-size:1.12rem}
 .sec-head{margin-bottom:2.5rem;max-width:40rem}.sec-head p{margin-top:.8rem;color:var(--muted)}
 /* nav */
-.nav{position:sticky;top:0;z-index:50;background:rgba(251,246,233,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,133,0,.2)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(251,246,233,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,133,0,.2)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
 .brand img{height:58px;width:auto;transition:transform .5s}.brand:hover img{transform:rotate(-6deg) scale(1.05)}
 .links{display:flex;gap:2rem;align-items:center;list-style:none;padding:0}
