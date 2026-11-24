@@ -52,6 +52,8 @@ section{padding:clamp(4rem,9vw,7rem) 0}
 .facts{display:flex;gap:2.2rem;margin-top:2rem;flex-wrap:wrap;font-weight:500}.facts b{display:block;font:700 1.4rem var(--serif);color:var(--honey)}
 .story .big{width:min(360px,80%);margin:auto;aspect-ratio:1/.866;clip-path:var(--hex)}
 /* categories */
+.cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn{white-space:nowrap}
 .cats{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
 .cat{text-align:center;text-decoration:none}
 .cat .hxi{width:100%;aspect-ratio:1/.866;clip-path:var(--hex);margin-bottom:.9rem;transition:transform .4s}
@@ -94,7 +96,7 @@ footer a{display:block;text-decoration:none;padding:.1rem 0}footer a:hover{color
 .burger{display:block}.links{position:absolute;top:78px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;padding:1rem 1.5rem 1.5rem;border-bottom:2px solid var(--honey);display:none}
 .links.open{display:flex}.links li{padding:.6rem 0}.chips{top:78px}
 }
-@media(max-width:480px){.cats{grid-template-columns:repeat(2,1fr)}.cta .btn{width:100%;justify-content:center}.fly{display:none}}
+@media(max-width:480px){.cats{grid-template-columns:repeat(2,1fr)}.cta .btn{flex:1 1 100%;justify-content:center}.fly{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 
 .prog{position:absolute;left:0;bottom:-1px;height:3px;background:var(--honey);width:calc(var(--sp,0)*1%)}
@@ -103,7 +105,8 @@ footer a{display:block;text-decoration:none;padding:.1rem 0}footer a:hover{color
 /* hero */
 .hero{position:relative;min-height:92vh;display:grid;align-items:center;overflow:hidden;color:var(--cream);padding:6rem 0 9rem}
 .herobg{position:absolute;inset:-15% 0 0;transform:translateY(calc(var(--py,0)*1px));background-color:var(--ink)}
-.ph.dark{background:#1c1c1c}.ph.dark::after{color:var(--honey);inset:auto 0 22% 0}
+.ph.dark{background-color:#1c1c1c;background-image:none}
+.herobg{background-size:cover;background-position:center;background-repeat:no-repeat}.ph.dark::after{color:var(--honey);inset:auto 0 22% 0}
 .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,8,.55),rgba(20,16,8,.3) 50%,rgba(20,16,8,.8))}
 .hc{position:relative;z-index:2;text-align:center}
 .hero h1{font-size:clamp(2.2rem,11.5vw,9rem);line-height:1;letter-spacing:-.03em;white-space:nowrap;text-shadow:0 6px 30px rgba(0,0,0,.35)}
