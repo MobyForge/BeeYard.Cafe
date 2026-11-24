@@ -106,8 +106,8 @@ footer a{display:block;text-decoration:none;padding:.1rem 0}footer a:hover{color
 .ph.dark{background:#1c1c1c}.ph.dark::after{color:var(--honey);inset:auto 0 22% 0}
 .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,8,.55),rgba(20,16,8,.3) 50%,rgba(20,16,8,.8))}
 .hc{position:relative;z-index:2;text-align:center}
-.hero h1{font-size:clamp(4.2rem,18vw,11.5rem);line-height:.86;letter-spacing:-.04em;text-shadow:0 6px 30px rgba(0,0,0,.35)}
-.hero h1 .l2{display:block;color:var(--honey);font-size:.52em;font-style:italic;font-weight:500;letter-spacing:-.02em;margin-top:.12em}
+.hero h1{font-size:clamp(2.2rem,11.5vw,9rem);line-height:1;letter-spacing:-.03em;white-space:nowrap;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+.hero h1 .y{color:var(--honey)}
 .hero .lead{color:#efe6cf;margin:1.6rem auto 2.2rem;max-width:44ch}
 .hero .cta{justify-content:center}
 .btn-light{border-color:var(--cream);color:var(--cream)}.btn-light:hover{background:var(--cream);color:var(--ink)}
