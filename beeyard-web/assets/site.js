@@ -67,7 +67,7 @@ loadImgs();
 const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target)}}),{threshold:.15});
 $$('.rv,.hexgrid,.cluster').forEach(e=>ro.observe(e));
 const bee='<svg class="bee" viewBox="0 0 40 30"><use href="#bee"/></svg>';
-$$('[data-bees]').forEach(el=>{for(let i=0;i<+el.dataset.bees;i++)el.insertAdjacentHTML('beforeend',`<svg class="fl bee ${i%2?'r':''}" viewBox="0 0 40 30" style="top:${14+i*26}%;--t:${19+i*5}s;--dl:-${i*8}s"><use href="#bee"/></svg>`)});
+$$('[data-bees]').forEach(el=>{for(let i=0;i<+el.dataset.bees;i++)el.insertAdjacentHTML('beforeend',`<svg class="fl bee ${i%2?'r':''}" viewBox="0 0 40 30" style="top:${8+(i*29)%78}%;width:${24+(i%3)*8}px;--t:${15+(i*7)%14}s;--dl:-${i*5}s"><use href="#bee"/></svg>`)});
 $$('.cluster').forEach(c=>c.insertAdjacentHTML('beforeend',`<div class="orbit">${bee}</div><div class="orbit o2">${bee}</div>`));
 let ci=0;$$('[data-split]').forEach(e=>{e.innerHTML=[...e.textContent].map(c=>`<span class="ch" style="--i:${ci++}">${c==' '?'&nbsp;':c}</span>`).join('')});
 const hero=$('.hero'),prog=$('.prog');
