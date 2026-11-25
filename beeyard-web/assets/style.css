@@ -83,6 +83,13 @@ section{padding:clamp(4rem,9vw,7rem) 0}
 .pin{position:absolute;left:50%;top:46%;transform:translate(-50%,-100%);width:52px;animation:bob 2.4s ease-in-out infinite}
 @keyframes bob{50%{transform:translate(-50%,-112%)}}
 .map small{position:absolute;left:1rem;bottom:1rem;background:var(--ink);color:var(--honey);padding:.4rem .9rem;border-radius:99px;font-size:.85rem}
+.info3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.8rem}
+.info3>div{background:var(--paper);border:1px solid rgba(201,133,0,.3);border-radius:22px;padding:1.3rem 1.4rem;display:grid;gap:.3rem;justify-items:start}
+.info3 i{width:44px;height:44px;clip-path:var(--hex);background:var(--honey);display:grid;place-items:center;font-style:normal;margin-bottom:.4rem}
+.info3 b{font-family:var(--serif);font-size:1.15rem}.info3 span,.info3 a{color:var(--muted);overflow-wrap:anywhere}
+.mapbox{margin-top:2rem;border-radius:28px;overflow:hidden;border:2px solid var(--ink);height:clamp(320px,48vw,520px);background:#efe4c4}
+.mapbox iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:860px){.info3{grid-template-columns:1fr}}
 /* footer */
 footer{background:var(--ink);color:#cfc6b0;padding:3.5rem 0 2rem;font-size:.95rem}
 footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem}
@@ -154,3 +161,8 @@ footer a{display:block;text-decoration:none;padding:.1rem 0}footer a:hover{color
  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.4rem;font-size:.82rem;line-height:1.3}
  .facts b{font-size:1rem}
 }
+.stack{--w:min(46vw,300px);position:relative;width:calc(var(--w)*2);height:calc(var(--w)*.866*1.3 + 56px);margin:1rem auto 0}
+.sh{position:absolute;left:calc(var(--w)*var(--l));top:calc(var(--w)*.866*var(--t));width:var(--w);aspect-ratio:1/.866;clip-path:var(--hex);background:var(--honey);animation:bobh 7s ease-in-out infinite;animation-delay:calc(var(--i)*-2s)}
+.sh .ph{position:absolute;inset:6px;clip-path:var(--hex)}
+.drop{position:absolute;left:calc(var(--w)*var(--x));top:calc(var(--w)*.866*var(--y) - 6px);width:10px;height:15px;margin-left:-5px;background:var(--honey);border-radius:50% 50% 50% 50%/40% 40% 60% 60%;z-index:9;opacity:0;animation:drip 3.4s ease-in infinite;animation-delay:var(--d)}
+@keyframes drip{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:1;transform:translateY(2px) scale(1)}80%{opacity:1}100%{opacity:0;transform:translateY(52px) scaleY(1.5)}}
