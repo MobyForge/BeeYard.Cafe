@@ -145,3 +145,12 @@ footer a{display:block;text-decoration:none;padding:.1rem 0}footer a:hover{color
 @keyframes spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
 .mini{margin:0 auto 1rem;text-align:center}
 @media(prefers-reduced-motion:reduce){.hx{opacity:1}}
+@media(max-width:860px){
+ .story{padding:3rem 0}
+ .story .wrap{gap:1.6rem}
+ .story .big{order:-1;width:min(300px,78%)}
+ .story h2{font-size:2rem}
+ .story .lead{font-size:1.02rem;margin-top:1rem}
+ .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.4rem;font-size:.82rem;line-height:1.3}
+ .facts b{font-size:1rem}
+}
