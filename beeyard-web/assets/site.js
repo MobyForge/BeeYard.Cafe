@@ -1,3 +1,4 @@
+(()=>{
 /* ===== EDIT THESE ===== */
 const CONFIG={
   whatsapp:'918197898209',            // country code + number, digits only
@@ -84,3 +85,4 @@ for(let i=0;i<20;i++){
 }
 fd.innerHTML=`<svg viewBox="0 0 1200 150" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><defs><linearGradient id="hg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="150"><stop offset="0" stop-color="#d98f00"/><stop offset=".4" stop-color="#f2b008"/><stop offset="1" stop-color="#ffd84d"/></linearGradient><filter id="goo" filterUnits="userSpaceOnUse" x="0" y="-30" width="1200" height="220"><feGaussianBlur in="SourceGraphic" stdDeviation="5"/><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"/></filter></defs><g filter="url(#goo)" fill="url(#hg)"><rect x="0" y="-20" width="1200" height="30"/>${bar}${drips}</g>${gloss}${hl}</svg>`;
 $('footer').prepend(fd);
+})();       
