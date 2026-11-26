@@ -30,7 +30,7 @@ document.body.insertAdjacentHTML('beforeend',`
 <footer><div class="wrap"><div><img src="assets/logo.png" alt="BeeYard Café"><p>Pasta, pizzas, burgers and good company, near IIPM Bengaluru.</p></div>
 <div><h3>Explore</h3><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Contact</a></div>
 <div><h3>Visit</h3><span>${CONFIG.address}</span><br><span>${CONFIG.hours}</span><a href="tel:${CONFIG.phone.replace(/[^+\d]/g,'')}">${CONFIG.phone}</a></div></div>
-<p class="copy">© ${new Date().getFullYear()} BeeYard.Cafe · Bengaluru</p></footer>
+<p class="copy">© ${new Date().getFullYear()} BeeYard.Cafe · Bengaluru<br>Designed and Developed by <a class="mf" href="https://mobyforge.com" target="_blank" rel="noopener">MobyForge</a></p>
 <a class="fab" data-wa href="${waLink}" aria-label="Chat on WhatsApp">${WA_ICON}</a>`);
 
 $$('a[data-wa]').forEach(a=>a.href=waLink);
