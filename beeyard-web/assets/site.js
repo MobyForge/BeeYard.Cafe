@@ -72,9 +72,6 @@ $$('.cluster').forEach(c=>c.insertAdjacentHTML('beforeend',`<div class="orbit">$
 let ci=0;$$('[data-split]').forEach(e=>{e.innerHTML=[...e.textContent].map(c=>`<span class="ch" style="--i:${ci++}">${c==' '?'&nbsp;':c}</span>`).join('')});
 const hero=$('.hero'),prog=$('.prog');
 addEventListener('scroll',()=>{prog.style.setProperty('--sp',scrollY/(document.body.scrollHeight-innerHeight)*100);hero&&scrollY<innerHeight&&hero.style.setProperty('--py',Math.min(scrollY*.2,100))},{passive:true});
-const fd=document.createElement('div');fd.className='fd';
-fd.innerHTML=Array.from({length:16},(_,i)=>`<i style="--x:${3+i*6.1+(i%3)*1.4}%;--w:${8+(i*5)%7}px;--h:${22+(i*17)%46}px;--t:${7+(i*3)%6}s;--d:-${(i*2.3)%9}s"></i>`).join('');
-$('footer').prepend(fd);
 const fd=document.createElement('div');fd.className='honey';
 let bar='',drips='',hl='',gloss='';
 for(let i=0;i<30;i++)bar+=`<circle cx="${i*42+(i%3)*9}" cy="${14+(i%4)*2}" r="${9+(i*7)%7}"/>`;
