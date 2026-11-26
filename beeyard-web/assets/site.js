@@ -1,6 +1,6 @@
 /* ===== EDIT THESE ===== */
 const CONFIG={
-  whatsapp:'919999999999',            // country code + number, digits only
+  whatsapp:'918197898209',            // country code + number, digits only
   phone:'+91 8197898209',
   address:'BeeYard.cafe 1503/30, Outer Ring Road, Kengunte, Mallathahalli, Opp Ambedhkar Institute,, Bengaluru',
   hours:'Mon–Sun · 10:30 AM – 10:30 PM',
