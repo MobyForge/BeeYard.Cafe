@@ -166,3 +166,14 @@ footer a{display:block;text-decoration:none;padding:.1rem 0}footer a:hover{color
 .sh .ph{position:absolute;inset:6px;clip-path:var(--hex)}
 .drop{position:absolute;left:calc(var(--w)*var(--x));top:calc(var(--w)*.866*var(--y) - 6px);width:10px;height:15px;margin-left:-5px;background:var(--honey);border-radius:50% 50% 50% 50%/40% 40% 60% 60%;z-index:9;opacity:0;animation:drip 3.4s ease-in infinite;animation-delay:var(--d)}
 @keyframes drip{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:1;transform:translateY(2px) scale(1)}80%{opacity:1}100%{opacity:0;transform:translateY(52px) scaleY(1.5)}}
+.story .wrap{grid-template-columns:1fr;gap:2.2rem;justify-items:center;text-align:center}
+.story .big{order:-1;width:min(380px,80%)}
+.story .lead{max-width:64ch;margin-inline:auto}
+.story .facts{display:flex;justify-content:center;gap:1.4rem 2.6rem;font-size:.95rem;line-height:1.35}
+.story .facts b{font-size:1.15rem}
+footer{position:relative;overflow:hidden;padding-top:5.5rem}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:14px;background:var(--honey)}
+.fd{position:absolute;top:0;left:0;right:0;height:0;pointer-events:none}
+.fd i{position:absolute;top:12px;left:var(--x);width:var(--w);height:6px;margin-left:calc(var(--w)/-2);background:var(--honey);border-radius:0 0 99px 99px;animation:slip var(--t) ease-in-out infinite;animation-delay:var(--d)}
+.fd i::after{content:"";position:absolute;bottom:calc(var(--w)*-.7);left:50%;width:calc(var(--w)*1.6);height:calc(var(--w)*1.6);margin-left:calc(var(--w)*-.8);border-radius:50%;background:var(--honey)}
+@keyframes slip{0%{height:4px;opacity:1}75%{height:var(--h);opacity:1}100%{height:calc(var(--h) + 30px);opacity:0}}
