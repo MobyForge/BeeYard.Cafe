@@ -31,7 +31,7 @@ document.body.insertAdjacentHTML('beforeend',`
 <div><h3>Explore</h3><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Contact</a></div>
 <div><h3>Visit</h3><span>${CONFIG.address}</span><br><span>${CONFIG.hours}</span><a href="tel:${CONFIG.phone.replace(/[^+\d]/g,'')}">${CONFIG.phone}</a></div></div>
 <p class="copy">© ${new Date().getFullYear()} BeeYard.Cafe · Bengaluru<br>Designed and Developed by <a class="mf" href="https://mobyforge.com" target="_blank" rel="noopener">MobyForge</a></p>
-<a class="fab" data-wa href="${waLink}" aria-label="Chat on WhatsApp">${WA_ICON}</a>`);
+<a class="fab" data-wa href="${waLink}" aria-label="Chat on WhatsApp">${WA_ICON}</a></footer>`);
 
 $$('a[data-wa]').forEach(a=>a.href=waLink);
 $$('.wa-icon').forEach(e=>e.innerHTML=WA_ICON);
