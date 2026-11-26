@@ -177,3 +177,5 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:14px;bac
 .fd i{position:absolute;top:12px;left:var(--x);width:var(--w);height:6px;margin-left:calc(var(--w)/-2);background:var(--honey);border-radius:0 0 99px 99px;animation:slip var(--t) ease-in-out infinite;animation-delay:var(--d)}
 .fd i::after{content:"";position:absolute;bottom:calc(var(--w)*-.7);left:50%;width:calc(var(--w)*1.6);height:calc(var(--w)*1.6);margin-left:calc(var(--w)*-.8);border-radius:50%;background:var(--honey)}
 @keyframes slip{0%{height:4px;opacity:1}75%{height:var(--h);opacity:1}100%{height:calc(var(--h) + 30px);opacity:0}}
+.copy a.mf{display:inline;color:var(--honey);font-weight:600;text-decoration:underline;text-underline-offset:3px;opacity:1}
+.copy a.mf:hover{color:var(--cream)}
