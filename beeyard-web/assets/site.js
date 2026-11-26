@@ -75,3 +75,15 @@ addEventListener('scroll',()=>{prog.style.setProperty('--sp',scrollY/(document.b
 const fd=document.createElement('div');fd.className='fd';
 fd.innerHTML=Array.from({length:16},(_,i)=>`<i style="--x:${3+i*6.1+(i%3)*1.4}%;--w:${8+(i*5)%7}px;--h:${22+(i*17)%46}px;--t:${7+(i*3)%6}s;--d:-${(i*2.3)%9}s"></i>`).join('');
 $('footer').prepend(fd);
+const fd=document.createElement('div');fd.className='honey';
+let bar='',drips='',hl='',gloss='';
+for(let i=0;i<30;i++)bar+=`<circle cx="${i*42+(i%3)*9}" cy="${14+(i%4)*2}" r="${9+(i*7)%7}"/>`;
+for(let i=0;i<6;i++)gloss+=`<ellipse cx="${90+i*210}" cy="6" rx="40" ry="2.2" fill="rgba(255,255,255,.3)"/>`;
+for(let i=0;i<20;i++){
+  const x=30+i*58+(i*37)%24,w=6+(i*5)%5,L=38+(i*29)%52,t=11+(i*3)%7,d=-((i*2.7)%t).toFixed(1);
+  const s=`--L:${L};--t:${t}s;--d:${d}s`;
+  drips+=`<g style="${s}"><rect class="stem" x="${x-w/2}" y="12" width="${w}" height="${L}" rx="${w/2}"/><circle class="bulb" cx="${x}" cy="12" r="${w*.9}"/></g>`;
+  hl+=`<ellipse class="bulb" style="${s}" cx="${x-w*.3}" cy="${12-w*.3}" rx="${w*.22}" ry="${w*.4}" fill="rgba(255,255,255,.55)"/>`;
+}
+fd.innerHTML=`<svg viewBox="0 0 1200 150" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><defs><linearGradient id="hg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="150"><stop offset="0" stop-color="#d98f00"/><stop offset=".4" stop-color="#f2b008"/><stop offset="1" stop-color="#ffd84d"/></linearGradient><filter id="goo" filterUnits="userSpaceOnUse" x="0" y="-30" width="1200" height="220"><feGaussianBlur in="SourceGraphic" stdDeviation="5"/><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"/></filter></defs><g filter="url(#goo)" fill="url(#hg)"><rect x="0" y="-20" width="1200" height="30"/>${bar}${drips}</g>${gloss}${hl}</svg>`;
+$('footer').prepend(fd);
