@@ -1,4 +1,3 @@
-(()=>{
 /* ===== EDIT THESE ===== */
 const CONFIG={
   whatsapp:'918197898209',            // country code + number, digits only
@@ -32,7 +31,7 @@ document.body.insertAdjacentHTML('beforeend',`
 <div><h3>Explore</h3><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Contact</a></div>
 <div><h3>Visit</h3><span>${CONFIG.address}</span><br><span>${CONFIG.hours}</span><a href="tel:${CONFIG.phone.replace(/[^+\d]/g,'')}">${CONFIG.phone}</a></div></div>
 <p class="copy">© ${new Date().getFullYear()} BeeYard.Cafe · Bengaluru<br>Designed and Developed by <a class="mf" href="https://mobyforge.com" target="_blank" rel="noopener">MobyForge</a></p>
-<a class="fab" data-wa href="${waLink}" aria-label="Chat on WhatsApp">${WA_ICON}</a></footer>`);
+<a class="fab" data-wa href="${waLink}" aria-label="Chat on WhatsApp">${WA_ICON}</a>`);
 
 $$('a[data-wa]').forEach(a=>a.href=waLink);
 $$('.wa-icon').forEach(e=>e.innerHTML=WA_ICON);
@@ -72,17 +71,4 @@ $$('[data-bees]').forEach(el=>{for(let i=0;i<+el.dataset.bees;i++)el.insertAdjac
 $$('.cluster').forEach(c=>c.insertAdjacentHTML('beforeend',`<div class="orbit">${bee}</div><div class="orbit o2">${bee}</div>`));
 let ci=0;$$('[data-split]').forEach(e=>{e.innerHTML=[...e.textContent].map(c=>`<span class="ch" style="--i:${ci++}">${c==' '?'&nbsp;':c}</span>`).join('')});
 const hero=$('.hero'),prog=$('.prog');
-addEventListener('scroll',()=>{prog.style.setProperty('--sp',scrollY/(document.body.scrollHeight-innerHeight)*100);hero&&scrollY<innerHeight&&hero.style.setProperty('--py',Math.min(scrollY*.2,100))},{passive:true});
-const fd=document.createElement('div');fd.className='honey';
-let bar='',drips='',hl='',gloss='';
-for(let i=0;i<30;i++)bar+=`<circle cx="${i*42+(i%3)*9}" cy="${14+(i%4)*2}" r="${9+(i*7)%7}"/>`;
-for(let i=0;i<6;i++)gloss+=`<ellipse cx="${90+i*210}" cy="6" rx="40" ry="2.2" fill="rgba(255,255,255,.3)"/>`;
-for(let i=0;i<20;i++){
-  const x=30+i*58+(i*37)%24,w=6+(i*5)%5,L=38+(i*29)%52,t=11+(i*3)%7,d=-((i*2.7)%t).toFixed(1);
-  const s=`--L:${L};--t:${t}s;--d:${d}s`;
-  drips+=`<g style="${s}"><rect class="stem" x="${x-w/2}" y="12" width="${w}" height="${L}" rx="${w/2}"/><circle class="bulb" cx="${x}" cy="12" r="${w*.9}"/></g>`;
-  hl+=`<ellipse class="bulb" style="${s}" cx="${x-w*.3}" cy="${12-w*.3}" rx="${w*.22}" ry="${w*.4}" fill="rgba(255,255,255,.55)"/>`;
-}
-fd.innerHTML=`<svg viewBox="0 0 1200 150" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><defs><linearGradient id="hg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="150"><stop offset="0" stop-color="#d98f00"/><stop offset=".4" stop-color="#f2b008"/><stop offset="1" stop-color="#ffd84d"/></linearGradient><filter id="goo" filterUnits="userSpaceOnUse" x="0" y="-30" width="1200" height="220"><feGaussianBlur in="SourceGraphic" stdDeviation="5"/><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"/></filter></defs><g filter="url(#goo)" fill="url(#hg)"><rect x="0" y="-20" width="1200" height="30"/>${bar}${drips}</g>${gloss}${hl}</svg>`;
-$('footer').prepend(fd);
-})();       
+addEventListener('scroll',()=>{prog.style.setProperty('--sp',scrollY/(document.body.scrollHeight-innerHeight)*100);hero&&scrollY<innerHeight&&hero.style.setProperty('--py',Math.min(scrollY*.2,100))},{passive:true});    
